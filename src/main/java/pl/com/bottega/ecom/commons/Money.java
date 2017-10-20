@@ -1,10 +1,12 @@
 package pl.com.bottega.ecom.commons;
 
+import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 
+@Embeddable
 public class Money implements Serializable, Comparable<Money> {
 
     public static final Currency DEFAULT_CURRENCY = Currency.getInstance("EUR");

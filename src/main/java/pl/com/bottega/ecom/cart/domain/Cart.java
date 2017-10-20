@@ -2,12 +2,17 @@ package pl.com.bottega.ecom.cart.domain;
 
 import pl.com.bottega.ecom.commons.BaseAggregateRoot;
 
+import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Entity
 public class Cart extends BaseAggregateRoot {
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @MapKey(name="productSnapshot.id")
     private Map<String, CartItem> items = new HashMap<>();
+
     private String customerId;
 
     public Cart(String customerId) {
