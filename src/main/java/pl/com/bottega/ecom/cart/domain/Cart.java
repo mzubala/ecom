@@ -1,6 +1,7 @@
 package pl.com.bottega.ecom.cart.domain;
 
-import pl.com.bottega.ecom.commons.BaseAggregateRoot;
+import pl.com.bottega.ecom.commons.domain.BaseAggregateRoot;
+import pl.com.bottega.ecom.events.ProductAddedToCart;
 
 import javax.persistence.*;
 import java.util.HashMap;
@@ -15,6 +16,8 @@ public class Cart extends BaseAggregateRoot {
 
     private String customerId;
 
+    Cart() {}
+
     public Cart(String customerId) {
         this.customerId = customerId;
     }
@@ -27,6 +30,7 @@ public class Cart extends BaseAggregateRoot {
             items.put(product.getId(), updatedItem);
         } else
             items.put(product.getId(), new CartItem(product, quantity));
+        fireEvent(new ProductAddedToCart(getId(), product.getId(), quantity));
     }
 
     public void remove(String productId) {

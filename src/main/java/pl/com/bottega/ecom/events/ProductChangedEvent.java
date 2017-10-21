@@ -1,6 +1,8 @@
 package pl.com.bottega.ecom.events;
 
-public class ProductChangedEvent {
+import pl.com.bottega.ecom.commons.domain.Event;
+
+public class ProductChangedEvent implements Event {
 
     public static final String NAME = "product-changed";
 

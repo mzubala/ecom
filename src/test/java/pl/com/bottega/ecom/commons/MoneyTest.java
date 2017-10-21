@@ -1,6 +1,7 @@
 package pl.com.bottega.ecom.commons;
 
 import org.junit.Test;
+import pl.com.bottega.ecom.commons.domain.Money;
 
 import static org.junit.Assert.*;
 

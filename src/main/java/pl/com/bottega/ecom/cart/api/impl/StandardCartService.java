@@ -1,23 +1,28 @@
 package pl.com.bottega.ecom.cart.api.impl;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import pl.com.bottega.ecom.cart.api.CatalogService;
 import pl.com.bottega.ecom.cart.domain.Cart;
 import pl.com.bottega.ecom.cart.api.CartService;
 import pl.com.bottega.ecom.cart.domain.CartRepository;
 import pl.com.bottega.ecom.cart.domain.ProductSnapshot;
+import pl.com.bottega.ecom.commons.domain.EventEngine;
 
 import java.util.Optional;
 
 @Component
+@Transactional
 public class StandardCartService implements CartService {
 
     private CartRepository cartRepository;
     private CatalogService catalogService;
+    private EventEngine eventEngine;
 
-    public StandardCartService(CartRepository cartRepository, CatalogService catalogService) {
+    public StandardCartService(CartRepository cartRepository, CatalogService catalogService, EventEngine eventEngine) {
         this.cartRepository = cartRepository;
         this.catalogService = catalogService;
+        this.eventEngine = eventEngine;
     }
 
     @Override
@@ -46,6 +51,7 @@ public class StandardCartService implements CartService {
         Optional<Cart> cartOptional = cartRepository.getActiveCart(customerId);
         Cart cart = cartOptional.orElseGet(() -> {
             Cart newCart = new Cart(customerId);
+            newCart.setEventEngine(eventEngine);
             cartRepository.save(newCart);
             return newCart;
         });

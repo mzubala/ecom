@@ -17,6 +17,8 @@ public class CartItem {
 
     private int quantity;
 
+    public CartItem() {}
+
     public CartItem(ProductSnapshot productSnapshot, int quantity) {
         this.productSnapshot = productSnapshot;
         this.quantity = quantity;

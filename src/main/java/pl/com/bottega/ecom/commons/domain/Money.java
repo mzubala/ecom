@@ -1,4 +1,4 @@
-package pl.com.bottega.ecom.commons;
+package pl.com.bottega.ecom.commons.domain;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;

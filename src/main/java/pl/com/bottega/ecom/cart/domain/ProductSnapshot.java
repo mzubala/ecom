@@ -1,6 +1,6 @@
 package pl.com.bottega.ecom.cart.domain;
 
-import pl.com.bottega.ecom.commons.Money;
+import pl.com.bottega.ecom.commons.domain.Money;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -14,6 +14,8 @@ public class ProductSnapshot {
 
     @Embedded
     private Money price;
+
+    ProductSnapshot() {}
 
     public ProductSnapshot(String id, Money price) {
         this.id = id;

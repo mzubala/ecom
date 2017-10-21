@@ -1,6 +1,6 @@
 package pl.com.bottega.ecom.cart.domain;
 
-import pl.com.bottega.ecom.commons.Repository;
+import pl.com.bottega.ecom.commons.domain.Repository;
 
 import java.util.Optional;
 
