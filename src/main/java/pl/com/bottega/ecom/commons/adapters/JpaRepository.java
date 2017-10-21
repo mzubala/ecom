@@ -14,9 +14,6 @@ public abstract class JpaRepository<T extends BaseAggregateRoot> implements Repo
     protected EntityManager entityManager;
     private Class<T> clazz;
 
-    @Autowired
-    private AutowireCapableBeanFactory autowireCapableBeanFactory;
-
     public JpaRepository(EntityManager entityManager) {
         this.entityManager = entityManager;
         this.clazz = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
@@ -27,7 +24,6 @@ public abstract class JpaRepository<T extends BaseAggregateRoot> implements Repo
         T aggregateRoot = entityManager.find(clazz, id);
         if(aggregateRoot == null)
             throw new AggregateNotFoundException(clazz, id);
-        postProcess(aggregateRoot);
         return aggregateRoot;
     }
 
@@ -36,7 +32,4 @@ public abstract class JpaRepository<T extends BaseAggregateRoot> implements Repo
         entityManager.persist(t);
     }
 
-    protected void postProcess(BaseAggregateRoot agg) {
-        autowireCapableBeanFactory.autowireBean(agg);
-    }
 }

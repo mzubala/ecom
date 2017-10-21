@@ -25,7 +25,6 @@ public class JpaCartRepository extends JpaRepository<Cart> implements CartReposi
             return Optional.empty();
         else {
             Cart c = carts.get(0);
-            postProcess(c);
             return Optional.of(c);
         }
     }
