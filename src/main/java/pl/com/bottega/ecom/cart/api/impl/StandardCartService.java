@@ -1,5 +1,6 @@
 package pl.com.bottega.ecom.cart.api.impl;
 
+import org.springframework.stereotype.Component;
 import pl.com.bottega.ecom.cart.api.CatalogService;
 import pl.com.bottega.ecom.cart.domain.Cart;
 import pl.com.bottega.ecom.cart.api.CartService;
@@ -8,6 +9,7 @@ import pl.com.bottega.ecom.cart.domain.ProductSnapshot;
 
 import java.util.Optional;
 
+@Component
 public class StandardCartService implements CartService {
 
     private CartRepository cartRepository;

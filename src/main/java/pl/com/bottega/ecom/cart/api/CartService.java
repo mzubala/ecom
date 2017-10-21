@@ -8,5 +8,4 @@ public interface CartService {
 
     void changeQuantity(String cartId, String productId, int quantity);
 
-
 }
