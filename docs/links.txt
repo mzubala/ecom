@@ -1,2 +1,31 @@
-https://docs.google.com/document/d/1pdBtMYv6h01_DhU1jYgKpo7PyHMoAdqD9J8KuihNaAc/edit#heading=h.43tpkk2b76jm
-https://goo.gl/forms/o1nZpKNHSoszCKRY2
+https://goo.gl/forms/o1nZpKNHSoszCKRY2 - ANKIETA (prośba o wypełnienie)
+
+https://docs.google.com/document/d/1pdBtMYv6h01_DhU1jYgKpo7PyHMoAdqD9J8KuihNaAc/edit#heading=h.43tpkk2b76jm - zadania
+https://drive.google.com/file/d/0BwhfCAalx60QT3RSUWxqajhZVDA/view?usp=sharing - mind map
+http://static.codingthearchitecture.com/c4.pdf - c4 cheat sheet
+https://martinfowler.com/articles/richardsonMaturityModel.html - rest maturity model
+Książki:
+
+1) Implementing Domain Diven Design:
+
+ver ang:
+
+https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjt9sbOmIbXAhVSi7IKHdZ6BksYABABGgJscg&ohost=www.google.pl&cid=CAESEeD2Fq1unY1Q8Ch8k9hbg8z3&sig=AOD64_2P_YfbhIM_Ad7SJJ2_yWpbWQlK7Q&ctype=5&q=&ved=0ahUKEwiCvMHOmIbXAhXoQZoKHQAyCU4Q9aACCDA&adurl= 
+
+ver pl:
+
+http://livro.pl/ddd-dla-architektow-oprogramowania-vernon-vaughn-sku1127997842.html?gclid=Cj0KCQjwprbPBRCHARIsAF_7gDb4sZiWA39g6yw9LwiYaGjB_qD4iuouHoeF3n6yEAl0Atr3cY_bL8kaAub9EALw_wcB&gclsrc=aw.ds
+
+2) Event storming:
+
+https://leanpub.com/introducing_eventstorming
+
+3) Integration patterns:
+
+http://www.enterpriseintegrationpatterns.com/patterns/messaging/
+
+4) Enterprise App Patterns:
+
+https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420
+
+Mój email: maciej.zubala na gmail.com
